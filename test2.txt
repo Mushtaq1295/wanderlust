@@ -1,0 +1,104 @@
+show.ejs
+<div class="card col-6">
+        <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
+         <!-- Content Section -->
+         <div class="show-content mt-3">
+            <ul>
+                <li><strong>Title:</strong> <%= listing.title %></li>
+                <li><strong>Description:</strong> <%= listing.description %></li>
+                <li><strong>Price:</strong> &#8377;<%= listing.price.toLocaleString("EN-IN") %></li>
+                <li><strong>Location:</strong> <%= listing.location %></li>
+                <li><strong>Country:</strong> <%= listing.country %></li>
+            </ul>
+            <div class="btn-group">
+                <a href="/listings/<%= listing._id %>/edit" class="btn edit-btn">Edit</a>
+                <form id="delete-form" method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
+                    <button type="button" class="btn delete-btn" onclick="confirmDelete()">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+style.css
+
+/* cards */
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+    
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    /* width: 100% !important; */
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+
+.card-img-overlay{
+    opacity: 0.5;
+}
+
+.show-img{
+    height: auto;
+    max-height: 400px;
+    
+}
+
+/* Button Styles */
+.add-btn, .edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none; /* Prevent underline on anchor buttons */
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #ff6b6b !important; /* Slightly lighter color on hover */
+    opacity: 0.9;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #dc3545 !important;
+    border: none !important;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.show-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.show-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.show-image img {
+    border-radius: 1rem;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+//i need the image and content to be side by side and don't change the size of image and content

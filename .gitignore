@@ -1,0 +1,13 @@
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnp
+.pnp.js
+node_modules/.bin
+/lib/captcha.js
+/dist
+/build
+/coverage
+.env
+.DS_Store

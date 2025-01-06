@@ -1,0 +1,144 @@
+body{
+    font-family: "plus Jakarta Sans",sans-serif imo !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-brands,.innername {
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+
+}
+
+/* title-tag */
+.titletag{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/* footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links,.f-info-socials,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+
+/* cards */
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border: none !important;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    /* width: 100% !important; */
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+
+.card-img-overlay{
+    opacity: 0.5;
+}
+
+.show-img{
+    height: auto;
+    max-height: 400px;
+    
+}
+
+/* Button Styles */
+.add-btn, .edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none; /* Prevent underline on anchor buttons */
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #ff6b6b !important; /* Slightly lighter color on hover */
+    opacity: 0.9;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #dc3545 !important;
+    border: none !important;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.show-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.show-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
