@@ -6,6 +6,8 @@
       method="post"
       action="/listings"
       enctype="application/x-www-form-urlencoded"
+      novalidate
+      class="needs-validation"
     >
       <div>
         <label for="title" class="form-label">Title</label>
@@ -14,7 +16,10 @@
           placeholder="title"
           name="listing[title]"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">looks good!</div>
+        <div class="invalid-feedback">please enter the title</div>
         <br />
       </div>
       <div>
@@ -24,7 +29,10 @@
           placeholder="description"
           name="listing[description]"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">Perfect!</div>
+        <div class="invalid-feedback">please enter the Description</div>
         <br />
       </div>
       <div>
@@ -34,17 +42,23 @@
           placeholder="enter image URL / Link"
           name="listing[image][url]"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">looks good!</div>
+        <div class="invalid-feedback">please enter the valid URL</div>
         <br />
       </div>
       <div>
         <label for="price" class="form-label">Price</label>
         <input
-          type="number"
+          
           placeholder="price"
           name="listing[price]"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">Right!</div>
+        <div class="invalid-feedback">please enter the Price</div>
         <br />
       </div>
       <div class="row">
@@ -55,7 +69,10 @@
             placeholder="location"
             name="listing[location]"
             class="form-control"
+            required
           />
+          <div class="valid-feedback">looks good!</div>
+          <div class="invalid-feedback">please enter the location</div>
           <br />
         </div>
         <div class="col-md-8">
@@ -65,11 +82,14 @@
             placeholder="country"
             name="listing[country]"
             class="form-control"
+            required
           />
+          <div class="valid-feedback">looks good!</div>
+          <div class="invalid-feedback">please enter the country</div>
           <br />
         </div>
       </div>
-      <button>Add</button> <br /><br />
+      <button class="addbtnNew">Add</button> <br /><br />
     </form>
   </div>
 </div>

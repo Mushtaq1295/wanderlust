@@ -7,6 +7,8 @@
       method="POST"
       action="/listings/<%= listing._id %>?_method=PUT"
       enctype="application/x-www-form-urlencoded"
+      novalidate
+      class="needs-validation"
     >
       <div>
         <label for="title" class="form-label">Title</label>
@@ -15,6 +17,7 @@
           value="<%= listing.title  %>"
           name="listing[title]"
           class="form-control"
+          required
         />
         <br />
       </div>
@@ -26,6 +29,7 @@
           value="<%= listing.description  %>"
           name="listing[description]"
           class="form-control"
+          required
         />
         <br />
       </div>
@@ -36,6 +40,7 @@
           value="<%= listing.image.url  %>"
           name="listing[image][url]"
           class="form-control"
+          required
         />
         <br />
       </div>
@@ -46,6 +51,7 @@
           value="<%= listing.price  %>"
           name="listing[price]"
           class="form-control"
+          required
         />
         <br />
       </div>
@@ -57,6 +63,7 @@
             value="<%= listing.location  %>"
             name="listing[location]"
             class="form-control"
+            required
           />
           <br />
         </div>
@@ -67,11 +74,13 @@
             value="<%= listing.country  %>"
             name="listing[country]"
             class="form-control"
+            required
           />
           <br />
         </div>
       </div>
-      <button>save</button>
+      <button class="addbtnNew">save</button>
     </form>
   </div>
 </div>
+<script src="/js/script.js"></script>

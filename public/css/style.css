@@ -95,7 +95,7 @@ body{
 }
 
 /* Button Styles */
-.add-btn, .edit-btn {
+.add-btn, .edit-btn,.addbtnNew {
     background-color: #fe424d !important;
     border: none !important;
     color: #fff;
